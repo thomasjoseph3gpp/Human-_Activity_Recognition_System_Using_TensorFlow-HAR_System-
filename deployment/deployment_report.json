@@ -1,0 +1,23 @@
+{
+  "deployment_status": "READY",
+  "model_statistics": {
+    "parameters": 38246,
+    "fp32_size_KB": 149.3984375,
+    "int8_size_KB": 37.349609375,
+    "tflite_size_KB": 42.7890625
+  },
+  "performance_metrics": {
+    "test_accuracy": 0.9334917068481445,
+    "tflie_accuracy": 0.97,
+    "inference_time_ms": 8.183521000003111
+  },
+  "edge_constrain_check": {
+    "max_size_2mb": true,
+    "max_inference_100ms": true,
+    "meets_all_constraints": true
+  },
+  "deployment_files": {
+    "keras_model": "edge_har_project\\models\\checkpoints\\har_model.h5",
+    "tflie_model": "edge_har_project\\config\\project.json"
+  }
+}

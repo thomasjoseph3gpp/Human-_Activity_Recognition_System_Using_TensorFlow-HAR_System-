@@ -1,0 +1,44 @@
+{
+  "project": {
+    "name": "Edge HAR",
+    "version": "1.0.0"
+  },
+  "defaults": {
+    "quantization": "int8",
+    "frame_size": 128,
+    "sampling_rate": 25,
+    "overlap": 0.5,
+    "normalization": "z-score",
+    "activities": [
+      "walking",
+      "sitting",
+      "standing",
+      "stairs"
+    ]
+  },
+  "edge_constraints": {
+    "max_model_size_mb": 2,
+    "max_inference_time_ms": 100,
+    "max_power_consumption_mw": 500,
+    "target_devices": [
+      "raspberry_pi",
+      "arduino",
+      "android"
+    ]
+  },
+  "preprocessing": {
+    "filter_type": "lowpass",
+    "filter_cutoff_hz": 5,
+    "remove_gravity": true
+  },
+  "model_architecture": {
+    "type": "cnn",
+    "layers": 5,
+    "parameters": 50000,
+    "input_shape": [
+      128,
+      3,
+      1
+    ]
+  }
+}
